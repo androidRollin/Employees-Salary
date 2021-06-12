@@ -32,7 +32,6 @@ namespace Employees_Salary
             this.lblEmpName = new System.Windows.Forms.Label();
             this.lblHrsWorked = new System.Windows.Forms.Label();
             this.lblEmpRank = new System.Windows.Forms.Label();
-            this.lblGrossSalary = new System.Windows.Forms.Label();
             this.lblDeductions = new System.Windows.Forms.Label();
             this.cbGSIS = new System.Windows.Forms.CheckBox();
             this.cbWithholdingTax = new System.Windows.Forms.CheckBox();
@@ -57,13 +56,14 @@ namespace Employees_Salary
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblGrossSal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEmpName
             // 
             this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Location = new System.Drawing.Point(12, 59);
+            this.lblEmpName.Location = new System.Drawing.Point(12, 30);
             this.lblEmpName.Name = "lblEmpName";
             this.lblEmpName.Size = new System.Drawing.Size(97, 15);
             this.lblEmpName.TabIndex = 0;
@@ -72,35 +72,25 @@ namespace Employees_Salary
             // lblHrsWorked
             // 
             this.lblHrsWorked.AutoSize = true;
-            this.lblHrsWorked.Location = new System.Drawing.Point(12, 86);
+            this.lblHrsWorked.Location = new System.Drawing.Point(12, 57);
             this.lblHrsWorked.Name = "lblHrsWorked";
-            this.lblHrsWorked.Size = new System.Drawing.Size(122, 15);
+            this.lblHrsWorked.Size = new System.Drawing.Size(119, 15);
             this.lblHrsWorked.TabIndex = 1;
-            this.lblHrsWorked.Text = "No of. Hours Worked:";
+            this.lblHrsWorked.Text = "No of Hours Worked:";
             // 
             // lblEmpRank
             // 
             this.lblEmpRank.AutoSize = true;
-            this.lblEmpRank.Location = new System.Drawing.Point(12, 121);
+            this.lblEmpRank.Location = new System.Drawing.Point(12, 92);
             this.lblEmpRank.Name = "lblEmpRank";
             this.lblEmpRank.Size = new System.Drawing.Size(91, 15);
             this.lblEmpRank.TabIndex = 2;
             this.lblEmpRank.Text = "Employee Rank:";
             // 
-            // lblGrossSalary
-            // 
-            this.lblGrossSalary.AutoSize = true;
-            this.lblGrossSalary.Location = new System.Drawing.Point(13, 152);
-            this.lblGrossSalary.Name = "lblGrossSalary";
-            this.lblGrossSalary.Size = new System.Drawing.Size(73, 15);
-            this.lblGrossSalary.TabIndex = 3;
-            this.lblGrossSalary.Text = "Gross Salary:";
-            this.lblGrossSalary.Click += new System.EventHandler(this.lblGrossSalary_Click);
-            // 
             // lblDeductions
             // 
             this.lblDeductions.AutoSize = true;
-            this.lblDeductions.Location = new System.Drawing.Point(12, 184);
+            this.lblDeductions.Location = new System.Drawing.Point(12, 155);
             this.lblDeductions.Name = "lblDeductions";
             this.lblDeductions.Size = new System.Drawing.Size(70, 15);
             this.lblDeductions.TabIndex = 4;
@@ -109,7 +99,7 @@ namespace Employees_Salary
             // cbGSIS
             // 
             this.cbGSIS.AutoSize = true;
-            this.cbGSIS.Location = new System.Drawing.Point(20, 212);
+            this.cbGSIS.Location = new System.Drawing.Point(20, 183);
             this.cbGSIS.Name = "cbGSIS";
             this.cbGSIS.Size = new System.Drawing.Size(120, 19);
             this.cbGSIS.TabIndex = 5;
@@ -119,7 +109,7 @@ namespace Employees_Salary
             // cbWithholdingTax
             // 
             this.cbWithholdingTax.AutoSize = true;
-            this.cbWithholdingTax.Location = new System.Drawing.Point(20, 248);
+            this.cbWithholdingTax.Location = new System.Drawing.Point(20, 219);
             this.cbWithholdingTax.Name = "cbWithholdingTax";
             this.cbWithholdingTax.Size = new System.Drawing.Size(123, 19);
             this.cbWithholdingTax.TabIndex = 6;
@@ -129,7 +119,7 @@ namespace Employees_Salary
             // cbPhilHealth
             // 
             this.cbPhilHealth.AutoSize = true;
-            this.cbPhilHealth.Location = new System.Drawing.Point(220, 212);
+            this.cbPhilHealth.Location = new System.Drawing.Point(220, 183);
             this.cbPhilHealth.Name = "cbPhilHealth";
             this.cbPhilHealth.Size = new System.Drawing.Size(94, 19);
             this.cbPhilHealth.TabIndex = 7;
@@ -139,7 +129,7 @@ namespace Employees_Salary
             // cbPagibig
             // 
             this.cbPagibig.AutoSize = true;
-            this.cbPagibig.Location = new System.Drawing.Point(220, 248);
+            this.cbPagibig.Location = new System.Drawing.Point(220, 219);
             this.cbPagibig.Name = "cbPagibig";
             this.cbPagibig.Size = new System.Drawing.Size(74, 19);
             this.cbPagibig.TabIndex = 8;
@@ -149,7 +139,7 @@ namespace Employees_Salary
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 212);
+            this.label1.Location = new System.Drawing.Point(157, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 9;
@@ -158,7 +148,7 @@ namespace Employees_Salary
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 248);
+            this.label2.Location = new System.Drawing.Point(157, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 15);
             this.label2.TabIndex = 10;
@@ -167,7 +157,7 @@ namespace Employees_Salary
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 212);
+            this.label3.Location = new System.Drawing.Point(337, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 15);
             this.label3.TabIndex = 11;
@@ -176,7 +166,7 @@ namespace Employees_Salary
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(337, 248);
+            this.label4.Location = new System.Drawing.Point(337, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 15);
             this.label4.TabIndex = 12;
@@ -185,7 +175,7 @@ namespace Employees_Salary
             // lblTotalDeduction
             // 
             this.lblTotalDeduction.AutoSize = true;
-            this.lblTotalDeduction.Location = new System.Drawing.Point(12, 284);
+            this.lblTotalDeduction.Location = new System.Drawing.Point(12, 255);
             this.lblTotalDeduction.Name = "lblTotalDeduction";
             this.lblTotalDeduction.Size = new System.Drawing.Size(98, 15);
             this.lblTotalDeduction.TabIndex = 13;
@@ -194,7 +184,7 @@ namespace Employees_Salary
             // lblLoanDetails
             // 
             this.lblLoanDetails.AutoSize = true;
-            this.lblLoanDetails.Location = new System.Drawing.Point(12, 314);
+            this.lblLoanDetails.Location = new System.Drawing.Point(12, 285);
             this.lblLoanDetails.Name = "lblLoanDetails";
             this.lblLoanDetails.Size = new System.Drawing.Size(74, 15);
             this.lblLoanDetails.TabIndex = 14;
@@ -203,7 +193,7 @@ namespace Employees_Salary
             // lblNetPay
             // 
             this.lblNetPay.AutoSize = true;
-            this.lblNetPay.Location = new System.Drawing.Point(12, 345);
+            this.lblNetPay.Location = new System.Drawing.Point(12, 316);
             this.lblNetPay.Name = "lblNetPay";
             this.lblNetPay.Size = new System.Drawing.Size(51, 15);
             this.lblNetPay.TabIndex = 15;
@@ -239,28 +229,28 @@ namespace Employees_Salary
             "Rank 1",
             "Rank 2",
             "Rank 3"});
-            this.cbEmpRank.Location = new System.Drawing.Point(141, 118);
+            this.cbEmpRank.Location = new System.Drawing.Point(141, 89);
             this.cbEmpRank.Name = "cbEmpRank";
             this.cbEmpRank.Size = new System.Drawing.Size(173, 23);
             this.cbEmpRank.TabIndex = 18;
             // 
             // tbEmpName
             // 
-            this.tbEmpName.Location = new System.Drawing.Point(141, 51);
+            this.tbEmpName.Location = new System.Drawing.Point(141, 22);
             this.tbEmpName.Name = "tbEmpName";
             this.tbEmpName.Size = new System.Drawing.Size(173, 23);
             this.tbEmpName.TabIndex = 19;
             // 
             // tbHrsWorked
             // 
-            this.tbHrsWorked.Location = new System.Drawing.Point(141, 83);
+            this.tbHrsWorked.Location = new System.Drawing.Point(141, 54);
             this.tbHrsWorked.Name = "tbHrsWorked";
             this.tbHrsWorked.Size = new System.Drawing.Size(173, 23);
             this.tbHrsWorked.TabIndex = 20;
             // 
             // tbGrossSalary
             // 
-            this.tbGrossSalary.Location = new System.Drawing.Point(141, 149);
+            this.tbGrossSalary.Location = new System.Drawing.Point(141, 120);
             this.tbGrossSalary.Name = "tbGrossSalary";
             this.tbGrossSalary.ReadOnly = true;
             this.tbGrossSalary.Size = new System.Drawing.Size(173, 23);
@@ -268,7 +258,7 @@ namespace Employees_Salary
             // 
             // tbTtlDeductions
             // 
-            this.tbTtlDeductions.Location = new System.Drawing.Point(141, 281);
+            this.tbTtlDeductions.Location = new System.Drawing.Point(141, 252);
             this.tbTtlDeductions.Name = "tbTtlDeductions";
             this.tbTtlDeductions.ReadOnly = true;
             this.tbTtlDeductions.Size = new System.Drawing.Size(173, 23);
@@ -276,7 +266,7 @@ namespace Employees_Salary
             // 
             // tbNetPay
             // 
-            this.tbNetPay.Location = new System.Drawing.Point(141, 342);
+            this.tbNetPay.Location = new System.Drawing.Point(141, 313);
             this.tbNetPay.Name = "tbNetPay";
             this.tbNetPay.ReadOnly = true;
             this.tbNetPay.Size = new System.Drawing.Size(173, 23);
@@ -284,9 +274,10 @@ namespace Employees_Salary
             // 
             // btnCompute
             // 
-            this.btnCompute.Location = new System.Drawing.Point(35, 396);
+            this.btnCompute.Location = new System.Drawing.Point(20, 356);
             this.btnCompute.Name = "btnCompute";
-            this.btnCompute.Size = new System.Drawing.Size(99, 23);
+            this.btnCompute.Padding = new System.Windows.Forms.Padding(3);
+            this.btnCompute.Size = new System.Drawing.Size(107, 33);
             this.btnCompute.TabIndex = 24;
             this.btnCompute.Text = "btn-&COMPUTE";
             this.btnCompute.UseVisualStyleBackColor = true;
@@ -294,9 +285,10 @@ namespace Employees_Salary
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(157, 396);
+            this.btnClear.Location = new System.Drawing.Point(133, 356);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Padding = new System.Windows.Forms.Padding(3);
+            this.btnClear.Size = new System.Drawing.Size(116, 33);
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "btn-CLEA&R";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -304,9 +296,9 @@ namespace Employees_Salary
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(255, 395);
+            this.btnClose.Location = new System.Drawing.Point(255, 356);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(114, 33);
             this.btnClose.TabIndex = 26;
             this.btnClose.Text = "btn-CLO&SE";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -316,16 +308,26 @@ namespace Employees_Salary
             // 
             this.panel1.Controls.Add(this.rbWithoutLoan);
             this.panel1.Controls.Add(this.rbWithLoan);
-            this.panel1.Location = new System.Drawing.Point(119, 310);
+            this.panel1.Location = new System.Drawing.Point(119, 281);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 26);
             this.panel1.TabIndex = 27;
+            // 
+            // lblGrossSal
+            // 
+            this.lblGrossSal.AutoSize = true;
+            this.lblGrossSal.Location = new System.Drawing.Point(12, 123);
+            this.lblGrossSal.Name = "lblGrossSal";
+            this.lblGrossSal.Size = new System.Drawing.Size(73, 15);
+            this.lblGrossSal.TabIndex = 28;
+            this.lblGrossSal.Text = "Gross Salary:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 450);
+            this.ClientSize = new System.Drawing.Size(389, 399);
+            this.Controls.Add(this.lblGrossSal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
@@ -348,7 +350,6 @@ namespace Employees_Salary
             this.Controls.Add(this.cbWithholdingTax);
             this.Controls.Add(this.cbGSIS);
             this.Controls.Add(this.lblDeductions);
-            this.Controls.Add(this.lblGrossSalary);
             this.Controls.Add(this.lblEmpRank);
             this.Controls.Add(this.lblHrsWorked);
             this.Controls.Add(this.lblEmpName);
@@ -394,6 +395,7 @@ namespace Employees_Salary
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblGrossSal;
     }
 }
 

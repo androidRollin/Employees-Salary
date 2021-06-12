@@ -23,11 +23,6 @@ namespace Employees_Salary
 
         }
 
-        private void lblGrossSalary_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCompute_Click(object sender, EventArgs e)
         {
 
@@ -42,5 +37,6 @@ namespace Employees_Salary
         {
 
         }
+
     }
 }
